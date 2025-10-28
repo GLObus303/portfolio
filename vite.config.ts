@@ -10,4 +10,14 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+        @use "/src/styles/breakpoint.scss" as *;
+        @use "/src/styles/color.scss" as *;
+        `,
+      },
+    },
+  },
 });
