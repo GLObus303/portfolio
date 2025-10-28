@@ -1,12 +1,55 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px;
+}
+
+.logo {
+  display: flex;
+  gap: 12px;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logoIcon {
+  animation: logo 16s linear infinite;
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.name {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2563eb;
-  text-align: center;
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.025em;
+  margin-top: 16px;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
 }
