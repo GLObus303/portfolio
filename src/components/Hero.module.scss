@@ -1,0 +1,52 @@
+.hero {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 $content-padding;
+  background-color: #000;
+}
+
+.profilePicture {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  max-width: 800px;
+  width: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+  opacity: 0.6;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  @media (min-width: $screen-md-min) {
+    align-items: center;
+    min-width: 45%;
+  }
+}
+
+.name {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.1;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 6rem;
+  }
+}
+
+.title {
+  margin-top: 16px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.75rem;
+  }
+}
