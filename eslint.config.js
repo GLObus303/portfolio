@@ -88,6 +88,7 @@ export default [
       'react/self-closing-comp': 2, // Empty JSX tags will collapse. <div></div> results to <div/>
       'react/jsx-curly-brace-presence': 2, // Avoid having useless curly braces for string props
       'react/no-unused-prop-types': 2, // Forbid unused types for component props
+      'react/prop-types': 0, // Allow prop-types to be used for component props
 
       // React Hooks rules
       ...reactHooks.configs.recommended.rules,
@@ -138,6 +139,10 @@ export default [
       '@typescript-eslint/no-shadow': 2, // Forbid declaring variables that have duplicate names in the same scope
       '@typescript-eslint/no-var-requires': 0, // allow require
       '@typescript-eslint/no-empty-function': 0, // allow empty function
+
+      // CSS Modules rules
+      'css-modules/no-undef-class': 2, // Disallow undefined CSS class names
+      'css-modules/no-unused-class': 2, // Disallow unused CSS classes
 
       // Import rules - matching original config
       'import/no-default-export': 0,

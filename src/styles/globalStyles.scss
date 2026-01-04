@@ -22,15 +22,15 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  background-color: #000;
+  color: $cyan-atom;
   font-family:
     'Inter',
     system-ui,
     -apple-system,
     sans-serif;
-  color: $cyan-atom;
-  background-color: #000;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 
   &::before {
     content: '';
@@ -39,9 +39,9 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+    background-image: url('../assets/grain.png');
     background-size: 200px 200px;
     background-repeat: repeat;
-    background-image: url('../assets/grain.png');
     opacity: 0.1;
     pointer-events: none;
   }
@@ -76,6 +76,7 @@ h6 {
 p {
   text-wrap: pretty;
 }
+
 h1,
 h2,
 h3,
@@ -87,8 +88,8 @@ h6 {
 
 #root,
 #__next {
-  isolation: isolate;
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
+  isolation: isolate;
 }
