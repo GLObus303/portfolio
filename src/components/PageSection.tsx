@@ -8,17 +8,17 @@ export type Job = {
 };
 
 type PageSectionProps = {
-  jobs: Job[];
   number: string;
   sectionTitle: string;
   subtitle: string;
+  children: React.ReactNode;
 };
 
 export const PageSection: React.FC<PageSectionProps> = ({
-  jobs,
   number,
   sectionTitle,
   subtitle,
+  children,
 }) => (
   <section
     className={style.section}
@@ -37,24 +37,7 @@ export const PageSection: React.FC<PageSectionProps> = ({
           <p>{subtitle}</p>
         </header>
 
-        <ul className={style.jobList}>
-          {jobs.map((job) => (
-            <li key={job.company} className={style.job}>
-              <h3 className={style.jobTitle}>
-                <span className={style.company}>{job.company}</span>
-                <span> – {job.role}</span>
-              </h3>
-              <p className={style.period}>{job.period}</p>
-              <ul className={style.highlights}>
-                {job.highlights.map((highlight) => (
-                  <li key={highlight} className={style.highlight}>
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+        <div className={style.sectionContent}>{children}</div>
       </div>
     </div>
   </section>
