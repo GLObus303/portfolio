@@ -1,4 +1,5 @@
 import { PageSection, type Job } from './PageSection';
+import style from './Experience.module.scss';
 
 const jobs: Job[] = [
   {
@@ -46,9 +47,27 @@ const jobs: Job[] = [
 
 export const Experience: React.FC = () => (
   <PageSection
-    jobs={jobs}
     number="02"
     sectionTitle="Galaxy of Roles"
     subtitle="Orbiting Companies"
-  />
+  >
+    <ul className={style.jobList}>
+      {jobs.map((job) => (
+        <li key={job.company} className={style.job}>
+          <h3 className={style.jobTitle}>
+            <span className={style.company}>{job.company}</span>
+            <span> – {job.role}</span>
+          </h3>
+          <p className={style.period}>{job.period}</p>
+          <ul className={style.highlights}>
+            {job.highlights.map((highlight) => (
+              <li key={highlight} className={style.highlight}>
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </PageSection>
 );
