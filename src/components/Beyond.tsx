@@ -9,17 +9,17 @@ export const Beyond: React.FC = () => (
   >
     <div className={style.content}>
       <p>
-        Over the years, I&apos;ve gone beyond day-to-day work — mentoring junior
-        developers, contributing to the community, and building passion
-        projects. A highlight has been co-creating SportujSpolu, a platform that
-        connects people who want to sport together.
+        Over the years, my work has gone beyond day-to-day development.
+        I&apos;ve mentored junior developers, shared knowledge across teams, and
+        built a few passion projects along the way. One of them is SportujSpolu,
+        a platform I co-created to help people find others to do sports with.
       </p>
       <p>
-        Mentoring has been one of the most rewarding parts of my journey.
-        I&apos;ve supported QA testers transitioning into React developers,
-        shared best practices across teams, and volunteered as a mentor at React
-        Girls events multiple times. For me, it&apos;s not only about delivering
-        products — it&apos;s about helping others grow.
+        Mentoring has been one of the most meaningful parts of my work.
+        I&apos;ve helped QA testers transition into React roles, supported
+        developers across teams, and volunteered multiple times as a mentor at
+        React Girls events. For me, it&apos;s not just about shipping features,
+        but about leaving teams and people stronger than I found them.
       </p>
     </div>
   </PageSection>

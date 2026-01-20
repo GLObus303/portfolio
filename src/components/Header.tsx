@@ -50,21 +50,24 @@ export const Header: React.FC = () => {
 
   return (
     <header className={style.header}>
-      Lukas Cizek
-      <div className={style.logo}>
-        <p>
-          10<sup>{currentConfig.scalePower}</sup>m
-        </p>
-        <div className={style.logoIcons}>
-          {headerConfigs.map((config, index) => (
-            <img
-              key={config.logo}
-              className={`${style.logoIcon} ${index === activeIndex ? style.logoActive : ''}`}
-              src={config.logo}
-              alt={index === activeIndex ? 'Logo' : ''}
-              aria-hidden={index !== activeIndex}
-            />
-          ))}
+      <div className={style.backdrop} />
+      <div className={style.headerContent}>
+        Lukas Cizek
+        <div className={style.logo}>
+          <p>
+            10<sup>{currentConfig.scalePower}</sup>m
+          </p>
+          <div className={style.logoIcons}>
+            {headerConfigs.map((config, index) => (
+              <img
+                key={config.logo}
+                className={`${style.logoIcon} ${index === activeIndex ? style.logoActive : ''}`}
+                src={config.logo}
+                alt={index === activeIndex ? 'Logo' : ''}
+                aria-hidden={index !== activeIndex}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </header>
