@@ -1,5 +1,6 @@
 .section {
   gap: 1rem;
+  min-height: 100vh;
   padding: 4rem $content-padding-mobile;
 
   @media (min-width: $screen-sm-min) {
@@ -43,7 +44,6 @@
   gap: 2rem;
   padding: 1.5rem 0;
   border-top: 1px solid $cyan-atom;
-
 
   @media (min-width: $screen-sm-min) {
     padding: 1.5rem;
